@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SaxAPISuite">
+<listeners>
+<listener class-name="com.securtime_api_utility.Listeners"/>
+</listeners>
+
+  <test name="Test">
+    <classes>
+      <class name="com.securtime_api_testcases.TC001_Get_Daily_Performancedata"/>
+      <class name="com.securtime_api_testcases.TC002_Post_CreateEmployee"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

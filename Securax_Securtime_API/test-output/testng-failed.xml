@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.securtime_api_testcases.TC002_Post_CreateEmployee">
+        <methods>
+          <include name="init"/>
+          <include name="checkResponseBody"/>
+          <include name="createEmployee"/>
+        </methods>
+      </class> <!-- com.securtime_api_testcases.TC002_Post_CreateEmployee -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
