@@ -18,6 +18,11 @@ public class EmployeeUtils {
 		String generatedEnrollid= RandomStringUtils.randomNumeric(6);
 		return generatedEnrollid;
 	}
+	
+	public static String timesheetName(){
+		String generateTimesheetName = RandomStringUtils.randomNumeric(3);
+		return ("TimesheetApi"+generateTimesheetName);
+	}
 
 
 }
