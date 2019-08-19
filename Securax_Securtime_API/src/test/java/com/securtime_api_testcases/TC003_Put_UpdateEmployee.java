@@ -9,16 +9,12 @@ import org.testng.annotations.Test;
 import com.securtime_api_base.TestBase;
 import com.securtime_api_utility.EmployeeUtils;
 
-import io.restassured.RestAssured;
 import io.restassured.http.Method;
 
-
-public class TC002_Post_CreateEmployee extends TestBase {
+public class TC003_Put_UpdateEmployee extends TestBase {
 	
-	@BeforeClass()
-	void createEmployee() throws InterruptedException{
-		
-		
+	@BeforeClass
+	void updateEmployee() throws InterruptedException{
 		JSONObject requestParams = new JSONObject();
 		
 		requestParams.put("affiliateName", property.getProperty("affiliatename"));
@@ -27,56 +23,41 @@ public class TC002_Post_CreateEmployee extends TestBase {
 		requestParams.put("dateOfBirth", property.getProperty("dateOfBirth"));
 		requestParams.put("departmentName", property.getProperty("departmentname"));
 		requestParams.put("employeeName", EmployeeUtils.empName());
-		requestParams.put("employeeId", EmployeeUtils.empID());
+		requestParams.put("employeeId", property.getProperty("employeeId"));
 		requestParams.put("enrollmentId", EmployeeUtils.enrollID());
 		requestParams.put("gender",property.getProperty("gender"));
 		requestParams.put("roleName",property.getProperty("rolename"));
+		requestParams.put("employmentStatus", property.getProperty("employmentStatus"));
 		
 		httpRequest.body(requestParams.toJSONString());
-		
-		
-		
-		response=httpRequest.request(Method.POST,"/api/employee");
+		response =httpRequest.request(Method.PUT,"/api/employee/update");
 		Thread.sleep(10000);
 		
-		
 	}
-	
-	@Test(priority=1)
+	@Test
 	void checkResponseBody(){
 		String responseBody=response.getBody().asString();
 		System.out.println(responseBody); 
 	}
 	
-	@Test(priority=2)
+	@Test
 	void checkStatusCode(){
 		int statuscode=response.getStatusCode();
 		Assert.assertEquals(statuscode, 200);
 	}
 	
-	@Test(priority=3)
+	@Test
 	void checkResponseTime(){
 		long responseTime=response.getTime();
 		System.out.println(responseTime);
 	}
 	
-	@Test(priority=4)
-	void checkContentType(){
-		String contentType=response.header("content-type");
-		Assert.assertEquals(contentType, "application/json;charset=UTF-8");
-	}
-	
-	@Test(priority=5)
-	void checkContentEncoding(){
-		String contentEncoding=response.header("content-encoding");
-		Assert.assertEquals(contentEncoding,"gzip");
-	}
-
-
 	@AfterClass
 	void TearDown() throws InterruptedException
 	{
 		Thread.sleep(3000);
 	}
 
+	
+	
 }

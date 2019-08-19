@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SaxAPISuite">
+<suite name="SaxAPISuite" verbose="2">
 <listeners>
 <listener class-name="com.securtime_api_utility.Listeners"/>
 </listeners>
 
-  <test name="Test">
+  <test name="SaxApi" preserve-order="true">
     <classes>
-      <class name="com.securtime_api_testcases.TC001_Get_Daily_Performancedata"/>
-      <class name="com.securtime_api_testcases.TC002_Post_CreateEmployee"/>
+      <class name="com.securtime_api_testcases.TC001_Get_Daily_Performance_Data" />
+      <!-- <class name="com.securtime_api_testcases.TC002_Post_CreateEmployee" />
+      <class name="com.securtime_api_testcases.TC003_Put_UpdateEmployee"/> -->
+      <class name="com.securtime_api_testcases.TC004_Get_Daily_Delta_Performance"/>
+      <class name="com.securtime_api_testcases.TC005_Get_LeaveBalance"/>
+      <class name="com.securtime_api_testcases.TC006_Get_LeaveTransactions"/>
+      <class name="com.securtime_api_testcases.TC0010_Get_RawPunch_data"/>
+      <class name="com.securtime_api_testcases.TC0011_Get_Delta_RawPunch_data"/>
+      <class name="com.securtime_api_testcases.TC0014_Get_TimeSheet_Data"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
