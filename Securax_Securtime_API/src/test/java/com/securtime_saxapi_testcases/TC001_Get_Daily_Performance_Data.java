@@ -1,5 +1,7 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 
+
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -8,43 +10,52 @@ import com.securtime_api_base.TestBase;
 import io.restassured.http.Method;
 import junit.framework.Assert;
 
-public class TC0010_Get_RawPunch_data extends TestBase {
+public class TC001_Get_Daily_Performance_Data extends TestBase{
+	
 	
 	@BeforeClass
-	void getRawPunchData() throws InterruptedException{
-		response = httpRequest.request(Method.GET,"api/raw-data/punches?empId=120&startDate=2019-06-01&endDate=2019-06-01");
-		Thread.sleep(5000);
+	public void getPerformanceData() throws Exception{
+	response = httpRequest.request(Method.GET,"/api/processed-data/daily-performance?startDate=2019-08-08&endDate=2019-08-08");
+	Thread.sleep(3000);	
 	}
 	
-	@Test
+	
+	
+	@Test(priority=1)
 	void checkResponseBody(){
 		String responseBody=response.getBody().asString();
 		System.out.println(responseBody);
 		
 	}
-
-	@Test
+	
+	@Test(priority=2)
 	void checkStatusCode(){
 		int statuscode=response.getStatusCode();
 		Assert.assertEquals(statuscode, 200);
 	}
-
-	@Test
+	
+	@Test(priority=3)
 	void checkResponseTime(){
 		long responseTime=response.getTime();
 		System.out.println(responseTime);
 	}
-
-	@Test
+	
+	@Test(priority=4)
 	void checkContentType(){
 		String contentType=response.header("content-type");
 		Assert.assertEquals(contentType, "application/json;charset=UTF-8");
 	}
-
-	@Test
+	
+	@Test(priority=5)
 	void checkContentEncoding(){
 		String contentEncoding=response.header("content-encoding");
 		Assert.assertEquals(contentEncoding,"gzip");
+	}
+	
+	@AfterClass
+	void TearDown() throws InterruptedException
+	{
+		Thread.sleep(3000);
 	}
 
 }

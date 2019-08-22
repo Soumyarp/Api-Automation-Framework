@@ -1,4 +1,4 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,13 +8,13 @@ import com.securtime_api_base.TestBase;
 import io.restassured.http.Method;
 import junit.framework.Assert;
 
-public class TC006_Get_LeaveTransactions extends TestBase {
+
+public class TC0014_Get_TimeSheet_Data extends TestBase {
 	
 	@BeforeClass
-	void getLeaveTransactiondataForEmployee() throws InterruptedException{
-		response= httpRequest.request(Method.GET,"/api/leave-transactions?empId=6&leaveFrom=2019-08-01");
-		Thread.sleep(3000);
-		
+	void getTimeSheetData() throws InterruptedException{
+		response = httpRequest.request(Method.GET,"/api/timesheet-data?dataFrom=2019-06-01 00:00:00");
+		Thread.sleep(10000);
 	}
 	
 	@Test
@@ -47,5 +47,6 @@ public class TC006_Get_LeaveTransactions extends TestBase {
 		String contentEncoding=response.header("content-encoding");
 		Assert.assertEquals(contentEncoding,"gzip");
 	}
+
 
 }

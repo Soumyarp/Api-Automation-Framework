@@ -1,4 +1,4 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 
 import org.json.simple.JSONObject;
 import org.testng.Assert;
@@ -10,8 +10,8 @@ import com.securtime_api_utility.EmployeeUtils;
 
 import io.restassured.http.Method;
 
-public class TC0012_Post_TimeSheet_Activity  extends TestBase{
-	
+public class TC0015_Post_TimeSheet_Project extends TestBase {
+
 	@BeforeClass
 	void CreateShiftRoster() throws InterruptedException{
 		JSONObject requestParams= new JSONObject();
@@ -19,7 +19,7 @@ public class TC0012_Post_TimeSheet_Activity  extends TestBase{
 		requestParams.put("name", EmployeeUtils.timesheetName());
 		
 		httpRequest.body(requestParams.toJSONString());
-		response =httpRequest.request(Method.POST,"/api/timesheet-activity");
+		response =httpRequest.request(Method.POST,"/api/timesheet-project");
 		
 		Thread.sleep(5000);
 	}
@@ -54,6 +54,5 @@ public class TC0012_Post_TimeSheet_Activity  extends TestBase{
 		String contentEncoding=response.header("content-encoding");
 		Assert.assertEquals(contentEncoding,"gzip");
 	}
-
-
+	
 }

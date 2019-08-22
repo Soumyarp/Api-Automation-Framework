@@ -23,22 +23,30 @@ public class TestBase {
 	public static Response response;
 	public static Properties property;
 	public static Logger logger; 
+    String baseURI;
 	
 	@BeforeSuite
 	public void init(){
 		System.out.println("setup initialized");
 		setUp();
-		String baseURI=property.getProperty("qauri");
+		String baseURI=property.getProperty(getMobileApiURI()?"saxqauri":"mobileqauri");
 		String apiKey= property.getProperty("key");
 		String apiValue=property.getProperty("value");
+		
 		RestAssured.baseURI=baseURI;
 	//	httpRequest= RestAssured.given();
 	//	httpRequest = RestAssured.given().config(RestAssured.config().encoderConfig(EncoderConfig.encoderConfig().encodeContentTypeAs("application/json",ContentType.TEXT)));
 		httpRequest=RestAssured.given().config(RestAssured.config().encoderConfig(EncoderConfig.encoderConfig().encodeContentTypeAs("application/json", ContentType.TEXT)));
 		httpRequest.header("x-apiKey",apiKey);
 		httpRequest.header("x-secret",apiValue);
+		
 		httpRequest.header("Content-Type","application/json");
 		System.out.println("closed");
+	}
+	public boolean getMobileApiURI(){
+		String userAccount =property.getProperty("useraccount");
+		httpRequest.header("user-account",userAccount);
+		return true;
 	}
 	public static void setUp(){
 		property = new Properties();

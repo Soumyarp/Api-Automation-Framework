@@ -1,4 +1,4 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 /*
  * Get Leave Balance for the organization
  * */

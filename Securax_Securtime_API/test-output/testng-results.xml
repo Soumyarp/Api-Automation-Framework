@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7036" started-at="2019-08-19T11:07:51Z" finished-at="2019-08-19T11:07:58Z">
+  <suite name="Default suite" duration-ms="5127" started-at="2019-08-22T13:49:05Z" finished-at="2019-08-22T13:49:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7036" started-at="2019-08-19T11:07:51Z" finished-at="2019-08-19T11:07:58Z">
-      <class name="com.securtime_api_testcases.TC0015_Post_TimeSheet_Project">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="init" is-config="true" duration-ms="823" started-at="2019-08-19T11:07:50Z" finished-at="2019-08-19T11:07:51Z">
+    <test name="Default test" duration-ms="5127" started-at="2019-08-22T13:49:05Z" finished-at="2019-08-22T13:49:10Z">
+      <class name="com.securtime_mobileapi_testcases.TC002_Get_PasswordRules">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.securtime_mobileapi_testcases.TC002_Get_PasswordRules@5e3a8624]" name="init" is-config="true" duration-ms="846" started-at="2019-08-22T13:49:04Z" finished-at="2019-08-22T13:49:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="CreateShiftRoster()[pri:0, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="CreateShiftRoster" is-config="true" duration-ms="6948" started-at="2019-08-19T11:07:51Z" finished-at="2019-08-19T11:07:58Z">
+        <test-method status="PASS" signature="getMobilePwdRules()[pri:0, instance:com.securtime_mobileapi_testcases.TC002_Get_PasswordRules@5e3a8624]" name="getMobilePwdRules" is-config="true" duration-ms="5060" started-at="2019-08-22T13:49:05Z" finished-at="2019-08-22T13:49:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateShiftRoster -->
-        <test-method status="PASS" signature="checkResponseBody()[pri:1, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="checkResponseBody" duration-ms="33" started-at="2019-08-19T11:07:58Z" finished-at="2019-08-19T11:07:58Z">
+        </test-method> <!-- getMobilePwdRules -->
+        <test-method status="PASS" signature="checkResponseBody()[pri:0, instance:com.securtime_mobileapi_testcases.TC002_Get_PasswordRules@5e3a8624]" name="checkResponseBody" duration-ms="31" started-at="2019-08-22T13:49:10Z" finished-at="2019-08-22T13:49:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody -->
-        <test-method status="PASS" signature="checkStatusCode()[pri:2, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="checkStatusCode" duration-ms="5" started-at="2019-08-19T11:07:58Z" finished-at="2019-08-19T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode -->
-        <test-method status="PASS" signature="checkResponseTime()[pri:3, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="checkResponseTime" duration-ms="2" started-at="2019-08-19T11:07:58Z" finished-at="2019-08-19T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseTime -->
-        <test-method status="PASS" signature="checkContentType()[pri:4, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="checkContentType" duration-ms="2" started-at="2019-08-19T11:07:58Z" finished-at="2019-08-19T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentType -->
-        <test-method status="PASS" signature="checkContentEncoding()[pri:5, instance:com.securtime_api_testcases.TC0015_Post_TimeSheet_Project@5e3a8624]" name="checkContentEncoding" duration-ms="2" started-at="2019-08-19T11:07:58Z" finished-at="2019-08-19T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentEncoding -->
-      </class> <!-- com.securtime_api_testcases.TC0015_Post_TimeSheet_Project -->
+      </class> <!-- com.securtime_mobileapi_testcases.TC002_Get_PasswordRules -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

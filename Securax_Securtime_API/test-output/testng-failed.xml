@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [SaxAPISuite]">
-  <listeners>
-    <listener class-name="com.securtime_api_utility.Listeners"/>
-  </listeners>
-  <test thread-count="5" verbose="2" name="SaxApi(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.securtime_api_testcases.TC001_Get_Daily_Performance_Data">
+      <class name="com.securtime_saxapi_testcases.TC001_Get_Daily_Performance_Data">
         <methods>
-          <include name="checkContentType"/>
           <include name="checkContentEncoding"/>
           <include name="checkStatusCode"/>
           <include name="init"/>
+          <include name="checkContentType"/>
+          <include name="TearDown"/>
+          <include name="checkResponseTime"/>
+          <include name="checkResponseBody"/>
           <include name="getPerformanceData"/>
         </methods>
-      </class> <!-- com.securtime_api_testcases.TC001_Get_Daily_Performance_Data -->
-      <class name="com.securtime_api_testcases.TC0011_Get_Delta_RawPunch_data">
-        <methods>
-          <include name="getDeltaRawPunchData"/>
-          <include name="checkStatusCode"/>
-          <include name="init"/>
-          <include name="checkContentType"/>
-          <include name="checkContentEncoding"/>
-        </methods>
-      </class> <!-- com.securtime_api_testcases.TC0011_Get_Delta_RawPunch_data -->
+      </class> <!-- com.securtime_saxapi_testcases.TC001_Get_Daily_Performance_Data -->
     </classes>
-  </test> <!-- SaxApi(failed) -->
-</suite> <!-- Failed suite [SaxAPISuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

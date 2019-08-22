@@ -1,4 +1,4 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,13 +8,12 @@ import com.securtime_api_base.TestBase;
 import io.restassured.http.Method;
 import junit.framework.Assert;
 
-
-public class TC0014_Get_TimeSheet_Data extends TestBase {
+public class TC0010_Get_RawPunch_data extends TestBase {
 	
 	@BeforeClass
-	void getTimeSheetData() throws InterruptedException{
-		response = httpRequest.request(Method.GET,"/api/timesheet-data?dataFrom=2019-06-01 00:00:00");
-		Thread.sleep(10000);
+	void getRawPunchData() throws InterruptedException{
+		response = httpRequest.request(Method.GET,"api/raw-data/punches?empId=120&startDate=2019-06-01&endDate=2019-06-01");
+		Thread.sleep(5000);
 	}
 	
 	@Test
@@ -47,6 +46,5 @@ public class TC0014_Get_TimeSheet_Data extends TestBase {
 		String contentEncoding=response.header("content-encoding");
 		Assert.assertEquals(contentEncoding,"gzip");
 	}
-
 
 }

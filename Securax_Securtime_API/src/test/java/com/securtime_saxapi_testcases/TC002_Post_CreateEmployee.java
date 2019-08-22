@@ -1,4 +1,4 @@
-package com.securtime_api_testcases;
+package com.securtime_saxapi_testcases;
 
 import org.json.simple.JSONObject;
 import org.junit.AfterClass;
