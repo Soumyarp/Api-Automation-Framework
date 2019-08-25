@@ -4,20 +4,34 @@
   <artifactId>Securax_Securtime_API</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <!--  <properties>
+   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-  </properties> -->
+  </properties> 
   
   <build>
+ <!--   <sourceDirectory>${basedir}/src</sourceDirectory>  -->
 <plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-shade-plugin</artifactId>
+<version>2.4</version>
+<executions>
+<execution>
+<phase>package</phase>
+<goals>
+<goal>shade</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <!-- <plugin>
@@ -45,11 +59,11 @@
  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.2</version>
+        <version>3.0.0-M3</version>
         <configuration>
         <useSystemClassLoader>false</useSystemClassLoader>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>C:\Users\Securax\git\Api-Automation-Framework\Securax_Securtime_API\testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -60,6 +74,7 @@
                 <version>3.0.0-M3</version>
             </plugin>
 </plugins>
+
 </build>
   
   

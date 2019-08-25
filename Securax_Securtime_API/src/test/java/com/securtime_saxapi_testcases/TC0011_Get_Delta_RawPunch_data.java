@@ -12,7 +12,7 @@ public class TC0011_Get_Delta_RawPunch_data extends TestBase {
 	
 	@BeforeClass
 	void getDeltaRawPunchData() throws InterruptedException{
-		response = httpRequest.request(Method.GET,"/api/raw-data/delta-punches?empId=120&punchesFrom=2019-06-01 00:00:00");
+		response = httpRequest.request(Method.GET,"/api/raw-data/delta-punches?punchesFrom=2019-08-23 14:00:00");
 		Thread.sleep(10000);
 	}
 	

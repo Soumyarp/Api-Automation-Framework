@@ -7,15 +7,15 @@
 
   <test name="SaxApi" preserve-order="true">
     <classes>
-      <class name="com.securtime_api_testcases.TC001_Get_Daily_Performance_Data" />
-      <!-- <class name="com.securtime_api_testcases.TC002_Post_CreateEmployee" />
-      <class name="com.securtime_api_testcases.TC003_Put_UpdateEmployee"/> -->
-      <class name="com.securtime_api_testcases.TC004_Get_Daily_Delta_Performance"/>
-      <class name="com.securtime_api_testcases.TC005_Get_LeaveBalance"/>
-      <class name="com.securtime_api_testcases.TC006_Get_LeaveTransactions"/>
-      <class name="com.securtime_api_testcases.TC0010_Get_RawPunch_data"/>
-      <class name="com.securtime_api_testcases.TC0011_Get_Delta_RawPunch_data"/>
-      <class name="com.securtime_api_testcases.TC0014_Get_TimeSheet_Data"/>
+      <class name="com.securtime_saxapi_testcases.TC001_Get_Daily_Performance_Data" />
+      <!-- <class name="com.securtime_saxapi_testcases.TC002_Post_CreateEmployee" />
+      <class name="com.securtime_saxapi_testcases.TC003_Put_UpdateEmployee"/> -->
+      <class name="com.securtime_saxapi_testcases.TC004_Get_Daily_Delta_Performance"/>
+      <class name="com.securtime_saxapi_testcases.TC005_Get_LeaveBalance"/>
+      <class name="com.securtime_saxapi_testcases.TC006_Get_LeaveTransactions"/>
+      <class name="com.securtime_saxapi_testcases.TC0010_Get_RawPunch_data"/>
+      <class name="com.securtime_saxapi_testcases.TC0011_Get_Delta_RawPunch_data"/>
+      <class name="com.securtime_saxapi_testcases.TC0014_Get_TimeSheet_Data"/>
       
     </classes>
   </test> <!-- Test -->

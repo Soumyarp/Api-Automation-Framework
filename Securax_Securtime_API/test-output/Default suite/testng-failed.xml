@@ -3,18 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.securtime_saxapi_testcases.TC001_Get_Daily_Performance_Data">
+      <class name="com.securtime_mobileapi_testcases.TC002_Get_PasswordRules">
         <methods>
-          <include name="checkContentEncoding"/>
-          <include name="checkStatusCode"/>
           <include name="init"/>
-          <include name="checkContentType"/>
-          <include name="TearDown"/>
-          <include name="checkResponseTime"/>
-          <include name="checkResponseBody"/>
-          <include name="getPerformanceData"/>
+          <include name="getMobilePwdRules"/>
+          <include name="checkStatusCode"/>
         </methods>
-      </class> <!-- com.securtime_saxapi_testcases.TC001_Get_Daily_Performance_Data -->
+      </class> <!-- com.securtime_mobileapi_testcases.TC002_Get_PasswordRules -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
